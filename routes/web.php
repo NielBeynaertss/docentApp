@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\MainController;
-
+use App\Http\Controllers\PageController;
 use App\Models\Teacher;
 
 /*
@@ -32,3 +32,5 @@ Route::controller(RegistrationController::class)->group(function() {
 
 Route::get('/main', [MainController::class, 'index']);
 
+Route::get('/search/teachers', 'MainControllerr@search')->name('search.teachers');
+Route::get('/pages/{name}', [PageController::class, 'show'])->name('page.show');
