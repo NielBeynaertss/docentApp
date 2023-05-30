@@ -57,7 +57,7 @@ class RegistrationController extends Controller
             ->subject('Bedankt voor uw registratie, '. request('firstname').'.');
         });
 
-        return redirect('/')->with('success', 'Registration successful. Welcome!');
+        return redirect('/main')->with('success', 'Registration successful. Welcome!');
 
     }
 }
