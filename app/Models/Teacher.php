@@ -16,6 +16,8 @@ class Teacher extends Model
         return $this->belongsTo(Category::class);
     }
 
+
+
     protected $fillable = [
         'lastname',
         'firstname',

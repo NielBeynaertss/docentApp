@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Teacher;
 use Faker\Factory as Faker;
@@ -22,7 +21,7 @@ class TeachersTableSeeder extends Seeder
         // Create Faker instance
         $faker = Faker::create();
 
-        // Generate 20 random dummy records
+        // Generate 50 random dummy records
         for ($i = 0; $i < 50; $i++) {
             Teacher::create([
                 'lastname' => $faker->lastName,
@@ -36,7 +35,7 @@ class TeachersTableSeeder extends Seeder
                 'location_id' => $faker->numberBetween(1, 4), // Random location ID from 1 to 4
                 'category_id' => $faker->numberBetween(1, 26), // Random category ID from 1 to 26
                 'streetnr' => $faker->buildingNumber,
-                'codecity' => $faker->postcode,
+                'codecity' => $faker->randomElement(['Genk', 'Brussels', 'Leuven']), // Set to Genk, Brussels, or Leuven randomly
                 // Add more fields as needed
             ]);
         }
