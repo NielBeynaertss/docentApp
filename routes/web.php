@@ -38,3 +38,4 @@ Route::get('/pages/{name}', [PageController::class, 'show'])->name('page.show');
 Route::get('/', [MainController::class, 'index'])->name('main.index');
 
 Route::get('/teachers/filter', [MainController::class, 'filterTeachers'])->name('teachers.filter');
+

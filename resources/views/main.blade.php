@@ -16,7 +16,7 @@
         
         <div class="row">
             <div class="col-md-12">
-                <div class="teacher-list">
+                <div class="teacher-list border">
                     <div class="row">
                         @include('partials.teacher-list', ['teachers' => $teachers])
                     </div>
